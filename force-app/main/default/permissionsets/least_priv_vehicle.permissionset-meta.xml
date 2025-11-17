@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Least Privilege - Vehicle</label>
+
+    <!-- Object Permissions -->
+    <objectPermissions>
+        <object>Info_Vehicle__c</object>
+        <allowRead>true</allowRead>
+        <allowCreate>true</allowCreate>
+        <allowEdit>false</allowEdit>
+        <allowDelete>false</allowDelete>
+        <viewAllRecords>false</viewAllRecords>
+        <modifyAllRecords>false</modifyAllRecords>
+    </objectPermissions>
+
+    <!-- Field Permissions -->
+    <fieldPermissions>
+        <field>Info_Vehicle__c.Registration_No__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Info_Vehicle__c.Expiry_Date__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+
+    <!-- Continue other fieldPermissions -->
+</PermissionSet>

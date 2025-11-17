@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicle_Type__c</fullName>
+    <label>Vehicle Type</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Two Wheeler</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Four Wheeler</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Heavy Vehicle</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+[
+  {
+    "sobject": "Info_Vehicle__c",
+    "saveRefs": false,
+    "files": [
+      "vehicle_data.json"
+    ]
+  }
+]

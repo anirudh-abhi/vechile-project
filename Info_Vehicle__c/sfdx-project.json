@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "Info Vehicles",
+      "default": true
+    }
+  ],
+  "name": "Info_Vehicle__c",
+  "namespace": "",
+  "sfdcLoginUrl": "Info Vehicle",
+  "sourceApiVersion": "58.0"
+}
