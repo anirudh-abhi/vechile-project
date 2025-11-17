@@ -38,8 +38,17 @@ pipeline {
         stage('Assign Permission Set') {
             steps {
                 bat '''
-                    echo Assigning permission set...
-                    sf force:user:permset:assign -n least_priv_vehicle -u %ORG_ALIAS%
+                    echo Checking if permission set is already assigned...
+
+                    sf data query -q "SELECT Id FROM PermissionSetAssignment WHERE Assignee.Username='anirudhabhi8008230@agentforce.com' AND PermissionSet.Name='least_priv_vehicle'" -o %ORG_ALIAS% > check_ps.txt
+
+                    findstr /C:"records\": []" check_ps.txt >nul
+                    if %errorlevel%==0 (
+                        echo Permission not assigned. Assigning now...
+                        sf force:user:permset:assign -n least_priv_vehicle -u %ORG_ALIAS%
+                    ) else (
+                        echo Permission already assigned. Skipping...
+                    )
                 '''
             }
         }
